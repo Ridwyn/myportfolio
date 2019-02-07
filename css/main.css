@@ -438,4 +438,9 @@ main#home h1 {
   .projects-info {
     grid-template-columns: 1fr;
   }
+
+  /* contact page */
+  .boxes {
+    justify-content: space-between;
+  }
 }
