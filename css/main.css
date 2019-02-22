@@ -41,7 +41,7 @@ body {
   width: 100%;
   height: 100%;
   background: #444;
-  opacity: 0.9;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -162,7 +162,7 @@ main#home h1 {
 
 /* Create slide-in effect when .show is added */
 .menu-nav.show {
-  right: -49%;
+  right: -50%;
   position: fixed;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
@@ -181,6 +181,8 @@ main#home h1 {
   background: url("../img/portrait.jpg");
   border-radius: 50%;
   border: solid 3px #eece1a;
+  opacity: 1;
+  z-index: 2;
 }
 
 .nav-item {
@@ -293,9 +295,13 @@ main#home h1 {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.8rem;
 }
+.item {
+  background-color: #444;
+}
+
 .projects-info .item img {
   width: 100%;
-  border: 3px #fff solid;
+  
 }
 
 .projects-info .item img:hover {
@@ -304,11 +310,12 @@ main#home h1 {
   transition: all 0.8s ease-in-out;
 }
 
+
 .btn {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem;
+  width: 100%;
 }
 
 .dark {
@@ -337,13 +344,16 @@ main#home h1 {
   border: 3px #fff solid;
   padding: 1.5rem 2.5rem;
   margin-bottom: 3rem;
-  transition: all 0.8s ease-in-out;
+  /* transition: all 0.8s ease-in-out; */
+  border-radius: 10px;
+  text-align: center;
 }
 
-.boxes div:hover {
-  padding: 0.5rem 1.5rem;
+.boxes div:not(:last-child):hover {
+  /* padding: 0.5rem 1.5rem; */
   background: #eece1a;
   color: #fff;
+  cursor: pointer;
 }
 
 .boxes div:hover span {
@@ -361,11 +371,11 @@ main#home h1 {
 }
 
 /* LARGE SCREEN  */
-@media screen and (min-width: 769) and (max-width: 1170px) {
+@media screen and (max-width: 1170px) and (min-width: 7769) {
   .projects-info {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.8rem;
+    /* grid-gap: 0.8rem; */
   }
 }
 
