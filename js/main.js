@@ -45,19 +45,3 @@ function toggleMenu() {
     showMenu = false;
   }
 }
-
-function openAbout() {
-  window.location = "about.html";
-}
-
-function openProjects() {
-  window.location = "projects.html";
-}
-
-function openContact() {
-  window.location = "contact.html";
-}
-
-function openIndex() {
-  window.location = "index.html";
-}
