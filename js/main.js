@@ -19,6 +19,26 @@ const navItems = document.querySelectorAll(".nav-item");
 // SET INITIAL STATE OF MENU
 let showMenu = false;
 
+{/* <li class="nav-item"><a href="/index.html" aria-label="Home" class="active">Home</a></li>
+<li class="nav-item"><a href="/about.html" aria-label="About Me">About Me</a></li>
+<li class="nav-item"><a href="/projects.html" aria-label="Projects">Projects</a></li>
+<li class="nav-item"><a href="/contact.html" aria-label="Contact">Get In Touch</a></li> */}
+
+
+let menuItems=[
+  {'href':'/index.html','text':'Home'},
+  {'href':'/about.html','text':'About Me'},
+  {'href':'/projects.html','text':'Projects'},
+  {'href':'/contact.html','text':'Get In Touch'},
+  {'href':'/privacy_policy.html','text':'Privacy Terms'},
+]
+
+menuNav.innerHTML=menuItems.map((item)=>{
+  return `<li class="nav-item">
+  <a href="${item.href}" aria-label="About Me">${item.text}</a>
+  </li> `
+}).join(" ")
+
 menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
