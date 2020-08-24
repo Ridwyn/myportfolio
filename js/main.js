@@ -64,12 +64,14 @@ if(window.location.pathname=="/projects.html"){
         </div>`
   }).join(" ");
 }
+
+
+// Menu items
 let menuItems=[
   {'href':'/index.html','text':'Home'},
   {'href':'/about.html','text':'About Me'},
   {'href':'/projects.html','text':'Projects'},
-  {'href':'/contact.html','text':'Get In Touch'},
-  {'href':'/privacy_policy.html','text':'Privacy Terms'},
+  {'href':'/contact.html','text':'Get In Touch'}
 ]
 
 menuNav.innerHTML=menuItems.map((item)=>{
